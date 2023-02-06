@@ -9,7 +9,7 @@ class socket_communication:
         self.socket = None
         self.client = None
         self.buffer_size = buffer_size
-
+        self.terminating_string = b'CLOSE'
         return
     
     def initiate_connection(self, client, address):
@@ -66,14 +66,14 @@ class socket_communication:
         try:
             if self.client is not None:
                 print("Sending message...")
-                self.socket.sendall(message)
+                self.socket.sendall(message+self.terminating_string)
                 print("Message Sent")
             return
         except Exception as error:
             print('Send Failed')
             raise error
 
-    def receive_frame(self):
+    def receive_frame(self, timeout = 2):
         recv_txt = b''
         try: 
             recv_txt = self.socket.recv(self.buffer_size)
@@ -86,14 +86,15 @@ class socket_communication:
         msg_txt = b''
         count = 1
         frame_txt = self.receive_frame()
-        while len(frame_txt) > 0:
+        while self.terminating_string not in frame_txt and len(frame_txt) > 0:
             msg_txt = msg_txt + frame_txt
             if count%5 == 0:
                 print("{} frames received".format(count))
             frame_txt = self.receive_frame()
             count += 1
         else:
-            return msg_txt
+            return msg_txt + frame_txt.removesuffix(b'CLOSE')
+
     
 
     

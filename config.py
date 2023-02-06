@@ -3,3 +3,5 @@ socket_buffer_size = 8081
 socket_port_number = 8080
 image_height = 640
 image_width = 640
+label_font = "arial.ttf"
+label_size = 20
