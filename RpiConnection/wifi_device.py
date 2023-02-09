@@ -1,4 +1,4 @@
-from socket_communication import socket_communication 
+from RpiConnection.socket_communication import socket_communication 
 from model import model 
 import image_handling
 import config

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_hl"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-3dp"
+        android:layout_marginEnd="-3dp"
+        android:background="@color/black_hl"
+        android:minHeight="?android:attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/top_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_marginStart="18dp"/>
+        <Button
+            android:id="@+id/btnConnect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="search"
+            android:onClick="searchDevices"
+            android:textColor="@color/blue"
+            android:backgroundTint="@color/black_bg"
+            android:layout_gravity="right" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="reset"
+            android:textColor="@color/blue"
+            android:id="@+id/btn_reset"
+            android:backgroundTint="@color/black_bg"
+            android:layout_gravity="right"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_fastest"
+            android:text="fastest"
+            android:textColor="@color/blue"
+            android:backgroundTint="@color/black_bg"
+            android:layout_gravity="right" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="image"
+            android:textColor="@color/blue"
+            android:id="@+id/btn_image"
+            android:backgroundTint="@color/black_bg"
+            android:layout_gravity="right"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ntu.scse.mdp2022.mainui.MapCanvas
+        android:id="@+id/mapCanvas"
+        android:layout_width="531dp"
+        android:layout_height="713dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.56"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_top" />
+
+    <TextView
+        android:id="@+id/text_legend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="PRESS + HOLD TO ADD TARGET   |   TAP TO ROTATE   |   DRAG TO MOVE   |   REMOVE - DRAG OUT OF GRID"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mapCanvas" />
+
+    <ImageButton
+        android:id="@+id/btn_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="67dp"
+        android:background="@null"
+        app:layout_constraintTop_toBottomOf="@+id/mapCanvas"
+        app:srcCompat="@drawable/ic_left_arrow_states"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btn_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="67dp"
+        android:background="@null"
+        app:layout_constraintTop_toBottomOf="@+id/mapCanvas"
+        app:srcCompat="@drawable/ic_right_arrow_states"
+        app:layout_constraintStart_toEndOf="@id/btn_left" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatboxlv"
+        android:layout_width="183dp"
+        android:layout_height="89dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="200dp"
+        android:background="@color/black_hl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mapCanvas"
+        app:srcCompat="@drawable/ic_up_arrow_states" />
+
+    <ImageButton
+        android:id="@+id/btn_forward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="67dp"
+        android:background="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mapCanvas"
+        app:srcCompat="@drawable/ic_up_arrow_states" />
+
+    <ImageButton
+        android:id="@+id/btn_backward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="67dp"
+        android:background="@null"
+        app:layout_constraintTop_toBottomOf="@+id/mapCanvas"
+        app:srcCompat="@drawable/ic_down_arrow_states"
+        app:layout_constraintRight_toLeftOf="@id/btn_forward" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/black_hl"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <EditText
+            android:id="@+id/chatboxinput"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:backgroundTint="#00FFFFFF"
+            android:cursorVisible="false"
+            android:background="@color/black_bg"
+            android:ems="10"
+            android:padding="10dp"
+            android:textColorHint="@color/blue"
+            android:textColor="@color/blue"
+            android:textSize="14sp"
+            android:hint="Send message ..."
+            android:inputType="textPersonName"
+            android:onClick="enableCursor"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:selectAllOnFocus="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/chatboxsend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:padding="10dp"
+            android:text="Send"
+            app:backgroundTint="@color/black_hl"
+            android:textColor="@color/blue"
+            android:layout_marginEnd="10dp"
+            android:onClick="sendText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+        </Button>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

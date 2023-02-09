@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">MDP_G27</string>
+    <string name="reset">RESET</string>
+    <string name="broadcast"><u>SEND OBSTACLES</u></string>
+    <string name="pause">THIS WILL <b><u>RESET TIMER</u></b>.TAKEN <b>SCREENSHOT</b>?\n(POWER + VOL_DOWN)</string>
+    <string name="bottom_sheet_title">BLUETOOTH</string>
+    <string name="str_label_btn_send">Send</string>
+    <string name="str_menu_search_devices">Search Devices</string>
+    <string name="str_menu_bluetooth_on">Search on Bluetooth</string>
+    <string name="tab_connection">Connection</string>
+    <string name="tab_message">Message</string>
+    <string name="bluetooth_available_devices">Available devices</string>
+    <string name="bluetooth_scan_btn">Scan</string>
+    <string name="bluetooth_connect_btn">Connect</string>
+    <string name="last_paired_device">Last paired device</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--  BluetoothChat -->
+    <string name="send">Send</string>
+    <string name="not_connected">You are not connected to a device</string>
+    <string name="bt_not_enabled_leaving">Bluetooth was not enabled. Leaving Bluetooth Chat.</string>
+    <string name="title_connecting">connecting...</string>
+    <string name="title_connected_to">connected to </string>
+    <string name="title_not_connected">not connected</string>
+
+    <!--  DeviceListActivity -->
+    <string name="scanning">scanning for devices...</string>
+    <string name="select_device">select a device to connect</string>
+    <string name="none_paired">No devices have been paired</string>
+    <string name="none_found">No devices found</string>
+    <string name="title_paired_devices">Paired Devices</string>
+    <string name="title_other_devices">Other Available Devices</string>
+    <string name="button_scan">Scan for devices</string>
+
+    <!-- Options Menu -->
+    <string name="secure_connect">Connect to Device</string>
+    <string name="insecure_connect">Connect a device - Insecure</string>
+    <string name="discoverable">Make Discoverable</string>
+    <string name="set_waypoint">Set Waypoint</string>
+    <string name="remove_waypoint">Remove Waypoint</string>
+    <string name="set_robot_position">Set Robot Position</string>
+    <string name="auto_map">Auto Update Map</string>
+    <string name="update_map">Manual Update Map</string>
+    <string name="set_config1">Set String 1 (C1)</string>
+    <string name="set_config2">Set String 2 (C2)</string>
+    <string name="swipe_input">Enable Gesture Control</string>
+    <string name="show_data_strings">Show Data Strings</string>
+    <string name="show_bluetooth_service">Show Bluetooth Comm</string>
+    <string name="image_recognition_string">Image Recognition String</string>
+    <string name="mdf_string_2_discovered_obstacles">MDF String 2: Discovered Obstacles</string>
+    <string name="mdf_string_1_explored_squares">MDF String 1: Explored Squares</string>
+
+    <string name="searchBTdevices">Searching devices..</string>
+    <string name="searchBTdevicesDone">Searching done</string>
+    <string name="enterMessage">Enter a message</string>
+    <string name="borderradius">10dp</string>
+
+</resources>
