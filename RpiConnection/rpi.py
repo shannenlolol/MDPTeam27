@@ -1,5 +1,4 @@
 from RpiConnection.socket_communication import socket_communication 
-from RpiConnection.bluetooth_android import bluetooth_android
 import config
 #import picam
 import image_handling
@@ -28,9 +27,3 @@ image = image_handling.np_array_to_image(image_handling.bytes_to_np_array(result
 image.save("images/result.jpg")
 
 s.disconnect()
-
-b = bluetooth_android()
-b.connect_android()
-b.reading_from_android()
-b.writing_to_android()
-b.disconnect_android()

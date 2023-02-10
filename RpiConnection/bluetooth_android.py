@@ -31,6 +31,7 @@ class bluetooth_android:
 
 
 
+#  to do: add in while loop for the connection
 
     # Connection to Android
     def connect_android(self):
@@ -65,7 +66,7 @@ class bluetooth_android:
             print("Failed to read from Android %s" % str(e))
 
 
-    # Writing to Android
+    # Writing to Android, message will be from image rec
     def writing_to_android(self):
         try:
             self.client_sock.send(msg)
