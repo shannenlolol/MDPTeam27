@@ -1,4 +1,4 @@
-from RpiConnection.STMInterface import STM
+from STMInterface import STM
 
 stm = STM()
 #    ser.__init__()
