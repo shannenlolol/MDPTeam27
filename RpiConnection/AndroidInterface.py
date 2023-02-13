@@ -8,7 +8,7 @@ ANDROID_SOCKET_BUFFER_SIZE = 2048
 PORT_NUM = PORT_ANY
 
 
-class bluetooth_android:
+class Android:
     # Initialisation 
     def __init__(self):
         self.server_sock = None
